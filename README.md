@@ -1,3 +1,27 @@
+# System-Integration-Project
+
+![](https://github.com/nikhilbadam56/Udacity-CarND-System-Integration-without-TF-TS-Classification/blob/master/imgs/final-project-ros-graph-v2.png)
+
+In this Project , We have integrated the individual modules required , for a successfull autonomous maneuvering of car in the simulation.
+
+This project has mainly three systems that need to be integrated namely , Perception System , Planning System , Control System.
+
+Perception System : In this project the job of Perception System is to accept the input from the sensors (camera) at some particular frequency , and then draw key conclusions on driving the car.
+
+Planning System : In this project the job of Planning System is to accept the inputs from the Perception System and then plan a Jerk minimizing trajectory from the current car waypoint to some waypoint ahead which is called horizon. Each waypoint has associated velocities, direction,acceleration,brake parameters that dictates the car to have the respective velocity,acceleration,brake when it reaches this waypoint.
+
+Control System : In this project the job of Control sysmte is to accept the waypoints from the planning system and then make the car follow these waypoints no matter how much extenral disturbances make it drift away from this reference Trajectory. PID controller is used to control the throttle , steering , brake.
+
+### PID PARAMETERS 
+
+kp : 0.3
+
+ki : 0.1
+
+kd : 0.0
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 This is the project repo for the final project of the Udacity Self-Driving Car Nanodegree: Programming a Real Self-Driving Car. For more information about the project, see the project introduction [here](https://classroom.udacity.com/nanodegrees/nd013/parts/6047fe34-d93c-4f50-8336-b70ef10cb4b2/modules/e1a23b06-329a-4684-a717-ad476f0d8dff/lessons/462c933d-9f24-42d3-8bdc-a08a5fc866e4/concepts/5ab4b122-83e6-436d-850f-9f4d26627fd9).
 
 Please use **one** of the two installation options, either native **or** docker installation.
